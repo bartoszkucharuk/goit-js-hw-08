@@ -64,7 +64,7 @@ const images = [
   },
 ];
   
-  const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 const galleryTemplate = images.map(({ preview, description, original }) =>
   `<li class="gallery-item">
       <a class="gallery-link" href="${original}">
@@ -76,4 +76,5 @@ const galleryTemplate = images.map(({ preview, description, original }) =>
         />
       </a>
     </li>`).join("");
-)
+
+gallery.insertAdjacentHTML("afterbegin", galleryTemplate);
