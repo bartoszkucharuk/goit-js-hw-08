@@ -65,24 +65,4 @@ const images = [
 ];
   
     const gallery = document.querySelector('.gallery');
-    const listGallery = images.map(({ preview, description, original }) => `
-      <li class="gallery-item">
-        <a class="gallery-link" href="${original}">
-          <img class="gallery-image" src="${preview}" data-source="${original}" alt="${description}">
-        </a>
-      </li>`
-    ).join("");
-    
-    gallery.insertAdjacentHTML('beforeend', listGallery);
-    
-    gallery.addEventListener('click', function(event) {
-      event.preventDefault();
-      if (event.target.nodeName !== "IMG")  {
-        return;
-      }
-      const selectedImg = event.target.dataset.source;
-      const instance = basicLightbox.create(`<img src="${selectedImg}" width="1112" height="640">`);
-      instance.show();
-    });
-
-  
+    const galleryTemplate = 
