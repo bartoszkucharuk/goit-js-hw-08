@@ -65,7 +65,7 @@ const images = [
 ];
   
   const gallery = document.querySelector('.gallery');
-const galleryTemplate = images.map(({ previev, description, original }) =>
+const galleryTemplate = images.map(({ preview, description, original }) =>
   `<li class="gallery-item">
       <a class="gallery-link" href="${original}">
         <img
