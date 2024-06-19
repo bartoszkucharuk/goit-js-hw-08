@@ -1,8 +1,6 @@
 ul {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 24px;
-    column-gap: 24px;
     list-style-type: none;
 }
 
@@ -11,10 +9,16 @@ img {
     height: 200px;
 }
 
+img:hover {
+    width: 376px;
+    height: 208px;
+}
+
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
+    width: 1280px;
+    flex-flow: flex-wrap;
+    justify-content: center;
     align-items: center;
     gap: 24px;
     flex-basis: ((100% - 48px)/2);
