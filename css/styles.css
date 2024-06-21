@@ -1,3 +1,8 @@
+body {
+    max-width: 1280px;
+    margin: 24px auto auto; 
+}
+
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -12,16 +17,17 @@ img {
 img:hover {
     width: 376px;
     height: 208px;
-    caret-color: rgba(78, 117, 255, 1);
-
+    cursor: pointer;
+    background-color: rgba(78, 117, 255, 1);
 }
 
 .gallery {
     display: flex;
-    width: 1280px;
+    max-width: 1280px;
     flex-flow: flex-wrap;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    row-gap: 24px;
+    column-gap: 24px;
     flex-basis: ((100% - 48px)/2);
 }
