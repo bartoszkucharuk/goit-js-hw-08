@@ -76,5 +76,30 @@ const galleryTemplate = images.map(({ preview, description, original }) =>
         />
       </a>
     </li>`).join("");
-
+// create .gallery after begin
 gallery.insertAdjacentHTML("afterbegin", galleryTemplate);
+ 
+// adding a function by using basicLightbox
+gallery.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
+  const clickedImage = event.target.dataset.source;
+// making modal window by basic lioghtbox
+  const instance = basicLightbox.create(`
+    <img src="${clickedImage}"
+    width="1112"
+    height="640">
+    `);
+  instance.show();
+
+  // closing gallery by using ESC keyboard button
+  gallery.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+    instance.close();
+    }
+  });
+});
+
+

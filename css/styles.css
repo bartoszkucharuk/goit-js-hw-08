@@ -12,6 +12,8 @@ img {
 img:hover {
     width: 376px;
     height: 208px;
+    caret-color: rgba(78, 117, 255, 1);
+
 }
 
 .gallery {
