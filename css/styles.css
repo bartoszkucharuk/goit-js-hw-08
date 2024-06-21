@@ -27,7 +27,6 @@ img:hover {
     flex-flow: flex-wrap;
     justify-content: center;
     align-items: center;
-    row-gap: 24px;
-    column-gap: 24px;
+    gap: 24px;
     flex-basis: ((100% - 48px)/2);
 }
