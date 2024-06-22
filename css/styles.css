@@ -12,6 +12,7 @@ ul {
 img {
     width: 360px;
     height: 200px;
+    margin: 12px;
 }
 
 img:hover {
@@ -19,6 +20,7 @@ img:hover {
     height: 208px;
     cursor: pointer;
     background-color: rgba(78, 117, 255, 1);
+    margin: 4px;
 }
 
 .gallery {
@@ -27,6 +29,6 @@ img:hover {
     flex-flow: flex-wrap;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    /* gap: 24px; */
     flex-basis: ((100% - 48px)/2);
 }
